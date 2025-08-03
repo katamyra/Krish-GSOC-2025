@@ -114,7 +114,7 @@ These are the PRs in place. Since a new API is also very exploratory work, there
 
 For reference, the code for the exploratory work mentioned in this report can be found at the following locations. These artifacts are provided as a record of the investigation process.
 
-* **`admin-api-server` (Standalone POC):** [Link](https://github.com/katamyra/Krish-GSOC-2025/tree/main/admin-api-server)``
+* **`admin-api-server` (Standalone POC):** [Link](https://github.com/katamyra/Krish-GSOC-2025/tree/main/admin-api-server)
 * **Local Thrift Test Server:** [Link](https://github.com/katamyra/Krish-GSOC-2025/tree/main/ThriftServer)
 
 ---
