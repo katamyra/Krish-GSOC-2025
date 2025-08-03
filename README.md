@@ -1,10 +1,13 @@
 ### **GSoC Project Report: Modernizing the Apache Airavata Admin Portal**
 
-**Author:** Krish Katariya
+**Author:** Krish Katariya \
+**Organization:** The Apache Software Foundation (_Sub Organization_: Apache Airavata) \
+**Project Size:** Small
+
 
 #### **1. Introduction**
 
-As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy PHP-based admin portal whos function included critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality into a modern, robust, and maintainable technology stack, beginning with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the strategic pivot we have mad to a new service architecture.
+As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy PHP-based admin portal whose function includes critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality into a modern, robust, and maintainable technology stack, beginning with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the strategic pivot we have made to a new service architecture.
 
 ---
 
@@ -12,7 +15,8 @@ As part of the broader effort to modernize Apache Airavata, this project's prima
 
 The project's initial phase focused on building out the user interface within the existing `airavata-research-portal` repository. Working with my peers on UI/UX designs, I implemented a wide range of new components and pages using the **Chakra UI v3** library.
 
-Originally, the goal was to replicate previous UI designs into the new `airavata-research-portal`, which I was able to implement succesfully. However, after building these, in discussions with the airavata community, we decided it made more sense to follow a new paradigm in which administrative tasks such as manageing compute resources and storage resources fell into the hands of the users, rather than admins who would have to manually add in new compute and storage resources. Baesd on this, we pivoted into a new UI design which prioritized users. Here are some examples of UI designs and implemented UIs. Over the course of GSOC, I built three different Chakra v3 React UIs, each building on the old one and improving in the UI/UX designs over time. 
+Originally, the goal was to replicate previous UI designs into the new `airavata-research-portal`, which I was able to implement succesfully. However after building out these UI components, in discussions with the airavata community, we decided it made more sense to adapt the UI to follow a new paradigm in which administrative tasks such as managing compute resources and storage resources fell into the hands of the users, rather than admins who would have to manually add in new compute and storage resources. Based on this, we pivoted into a new UI design which prioritized users. Here are some examples of UI designs and implemented UIs. From here, a third redesign of the UI followed to improve on the overall user experience. Over the course of GSOC, I built three different Chakra v3 React UIs, each building on the old one and improving in the UI/UX designs over time. 
+
 
 Key accomplishments in this phase include:
 * **New Research Catalogue:** A significant addition was a comprehensive research catalogue page, providing new views for managing **models, repositories, datasets, and notebooks**.
