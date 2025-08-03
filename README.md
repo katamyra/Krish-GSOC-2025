@@ -1,4 +1,4 @@
-### **GSoC Project Report: Modernizing the Apache Airavata Admin Portal**
+## **GSoC Project Report: Modernizing the Apache Airavata Admin Portal**
 
 **Author:** Krish Katariya \
 **Organization:** The Apache Software Foundation (_Sub Organization_: Apache Airavata) \
