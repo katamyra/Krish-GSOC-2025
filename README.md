@@ -7,23 +7,21 @@
 
 #### **1. Introduction**
 
-As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy Django-based admin portal whose function includes critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality into a modern, robust, and maintainable technology stack, beginning with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the strategic pivot we have made to a new service architecture.
+As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy Django-based admin portal whose function includes critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality of managing resources into a mor emordern and maintainable technology stack than what we currently have, starting with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the pivot we are currently making to a new service architecture.
 
 ---
 
 #### **2. Phase I: User Interface Development**
 
-The project's initial phase focused on building out the user interface within the existing `airavata-research-portal` repository. Working with my peers on UI/UX designs, I implemented a wide range of new components and pages using the **Chakra UI v3** library.
+The project's initial phase focused on building out the user interface within the `airavata-research-portal` repository. Working with my peers on UI/UX designs, I implemented a wide range of new components and pages using the **Chakra UI v3** library.
 
-Originally, the goal was to replicate previous UI designs into the new `airavata-research-portal`, which I was able to implement succesfully. However after building out these UI components, in discussions with the airavata community, we decided it made more sense to adapt the UI to follow a new paradigm in which administrative tasks such as managing compute resources and storage resources fell into the hands of the users, rather than admins who would have to manually add in new compute and storage resources. Based on this, we pivoted into a new UI design which prioritized users. Here are some examples of UI designs and implemented UIs. From here, a third redesign of the UI followed to improve on the overall user experience. Over the course of GSOC, I built three different Chakra v3 React UIs, each building on the old one and improving in the UI/UX designs over time. 
+Originally, the goal was to replicate previous UI designs into the new `airavata-research-portal`, which I was able to implement succesfully. However after building out these UI components, in discussions with the airavata community, we decided it made more sense to adapt the UI to follow a new paradigm in which administrative tasks such as managing compute resources and storage resources became the responsiblity of the users, rather than admins who would have to manually add in new compute and storage resources. Based on this, we pivoted into a new UI design which prioritized users. From here, a third redesign of the UI followed to improve on the overall user experience. Over the course of GSOC, I built three different Chakra v3 React UIs, each building on the old one and improving in the UI/UX designs over time. 
 
+Some of my accomplishments in this phase include:
+* **New Research Catalogue:** Added a comprehensive research catalogue page, providing new views for managing **models, repositories, datasets, and notebooks**.
+* **Resource Management UI:** User interfaces were also built for adding new items such as **compute and storage resources**, as well as for initiating new user sessions.
 
-Key accomplishments in this phase include:
-* **New Research Catalogue:** A significant addition was a comprehensive research catalogue page, providing new views for managing **models, repositories, datasets, and notebooks**.
-* **Resource Management UI:** Interfaces were built for adding new items such as **compute and storage resources**, as well as for initiating new user sessions.
-* **Integration-Ready Development:** All UI development was performed in a dedicated fork of the repository to ensure that the new code can be cleanly integrated into the main project via a pull request at the appropriate time. The UI was built against mock data to facilitate rapid and independent development.
-
-**Note**: At this point, the UI's had been using mock data, and the next phase includes integration of real time data.
+**Note**: At this point, the UI's had been using mock data, and the next phase includes the integration of real time data.
 
 ##### UI v1 (Django Replication)
 
@@ -71,29 +69,29 @@ Key accomplishments in this phase include:
 
 #### **3. Phase II: Backend Integration and Technical Investigation**
 
-The second phase aimed to replace the UI's mock data with live data from the backend by connecting to the **Apache Thrift API**. Unlike a traditional REST API, Thrift requires a code-generation step using a compiler. This process revealed several significant technical hurdles that highlighted the friction between legacy Thrift architecture and modern web development practices.
+The second phase aimed to replace the UI's mock data with live data from the backend by connecting to the **Apache Thrift API**. Unlike a traditional REST API, Thrift requires a code-generation step using a compile, and while trying to integrate the react portal with this code-generation step, I found several significant technical hurdles that highlighted the overall friction between our current Thrift architecture and modern web development frameworks. 
 
-* **Challenge 1: Compiler and Module Incompatibility:** Our **Vite-based** React application requires **ES Modules (ESM)** for its JavaScript modules. The official Thrift compiler, having not received significant updates in this area, generates code using the older **CommonJS** format. This makes it incompatible with our modern toolchain out-of-the-box.
-    * **Solution:** After extensive research, I located a specific commit on the Thrift source repository. By building the compiler from this exact source, I was able to generate ESM-compatible TypeScript code. The resulting code was generally functional, though occasionally "iffy," and required careful handling.
+* **Challenge 1: Compiler and Module Incompatibility:** Our **Vite-based** React application requires **ES Modules (ESM)** for its JavaScript modules. The issue with this is that the official Thrift compiler, having not received significant updates in this area, generates code using the older **CommonJS** format. This makes it incompatible with our modern Vite/React toolchain out-of-the-box.
+    * **Solution:** After a lot of research, I located a specific commit on the Thrift source repository. By building the compiler from this exact source, I was able to generate ESM-compatible TypeScript code. The resulting code was generally functional, though occasionally "iffy," and required careful handling.
 
-* **Challenge 2: Browser vs. Server-Side JavaScript:** The generated Thrift client code was designed for a server-side Node.js environment and depended on core Node APIs not present in web browsers.
-    * **Solution:** While manually modifying the auto-generated code was an option, it was deemed impractical and unmaintainable. The more realistic approach was to implement several **browser polyfills**. These polyfills successfully bridged the environmental gap, allowing the server-centric code to execute in the browser.
+* **Challenge 2: Browser vs. Server-Side JavaScript:** The generated Thrift client code was also designed for a server-side Node.js environment and depended on core Node APIs that are usually not present in web browsers.
+    * **Solution:** While manually modifying the auto-generated code was an option, it was pretty impractical and highlighted a bigger issue that we needed to solve down the line anyways. As a temporary measure, I implemented several **browser polyfills**. These polyfills successfully bridged the environmental gap, allowing the server-centric code to execute in the browser.
 
-* **Debugging Step - Local Test Server:** At this point, I was still unable to get proper connection with the server through my react portal. To verify the generated client code and the polyfills, I built a local Thrift test server in Python. I was able to stand up a fully functional version of the portal that successfully communicated with this local server. This crucial step proved that the client-side code was correct, isolating the remaining issues to the connection with the main production server.
+* **Debugging Step - Local Test Server:** At this point, I was still unable to get proper connection with the server through my react portal, and so to verify the generated client code and the polyfills, I built a local Thrift test server in Python. I was able to build up a fully functional version of the portal that successfully communicated with this local server. This was important because it proved that the client-side code was correct, meaning the remaining issues to the connection was with the main production server.
 
-* **Challenge 3: Network Protocol Mismatch:** The final and most critical blocker was the network protocol. The existing Airavata Thrift server communicates using the binary **`TSocket`** protocol, which worked well in its original PHP environment. However, for security reasons, web browsers are limited to making requests via **HTTP** and **WebSockets**. This fundamental protocol incompatibility makes a direct connection from the browser-based React app to the `TSocket` service impossible.
+* **Challenge 3: Network Protocol Mismatch:** The last blocker explaining the issues from above was the network protocol. The existing Airavata Thrift server communicates using the binary **`TSocket`** protocol, which worked well in its original PHP environment. However, for security reasons, web browsers are limited to making requests via **HTTP** and **WebSockets**, which leads to an incompatibility making direct connection from the browser-based React app to the `TSocket` service impossible.
 
 ---
 
 #### **4. Phase III: Future Direction, Architectural Pivot, and Current Work**
 
-The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws, or the server would have to be adapted to run on HTTP. Based on this and discussions with the community, I began design and development on a new, standalone API: the `admin-api-server`. The idea was that this API would provide a modern, RESTful endpoints API specifically for managing compute and storage resources, which could then be adapted over time to take up more responsibilities from the airavata-api. The benefit to this is that the API could be built with the user-based paradigm in mind. 
+The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws, or the server would have to be adapted to run on HTTP. Based on this and discussions with the community, I began design and development on a new, standalone API: the `admin-api-server`. The idea was that this API would provide a modern, RESTful endpoints API specifically for managing compute and storage resources, which could then be adapted over time to take up more responsibilities from the airavata-api. The benefit to this is that the API could be built with the user-based paradigm mentioned before in mind. 
 
-However, as this work progressed, we decidede it was better to avoid architectural fragmentation and the operational overhead associated with adding a whole new separate API. I pivoted into instead adding a new version 2 api to the `research-service` API. This was a second, also complex architectural pivot which introduced a significant and nuanced engineering challenge because the work, architecture, and logic that had been designed for the standalone `admin-api-server` could not simply be copied over. Instead, it needed to be carefully **translated and adapted to work within the constraints of the `research-service`'s existing v1 architecture**.
+However, as this work progressed, we decided it was better to add a version 2 to the `research-service` API. This was a second, also complex architectural pivot which introduced more engineering because the architecture and code that had been designed for the standalone `admin-api-server` could not just be copied over. 
 
 This translation effort is the core of my current work and involves several complexities:
-* **Reconciling Architectural Patterns:** The design patterns and assumptions of the new `admin-api-server` had to be reconciled with the established conventions and patterns already present in the `research-service`.
-* **Integrating Data Models:** The new data models for compute and storage resources had to be carefully integrated into the existing persistence layer of the `research-service`, ensuring consistency and avoiding conflicts.
+* **Architectural Patterns:** The design patterns and assumptions of the new `admin-api-server` had to be adapted to the established conventions and patterns already present in the `research-service`.
+* **Integrating Data Models:** The new data models for compute and storage resources had to be integrated with the `airavata-api` which has its own issues due to OpenJPA versioning issues.
 
 If you are more interested in the specific implementation details in the v2 API, feel free to take a look at the v2 API PR (linked below)!
 
@@ -116,7 +114,7 @@ For reference, the code for the exploratory work mentioned in this report can be
 
 #### **7. Community Communication and Collaboration**
 
-Communication progressed through several ways:
+Communication happened throughout GSoC through several ways:
 * **Regular Meeting Progress Updates:** I provided consistent updates on development progress weekly during meetings, showing current work done and future steps. 
   * **Architectural Discussions and Consensus Building:** When significant technical roadblocks were encountered with the Thrift integration, they were discussed in these meetings.
 * **Posting Updates to the Airavata Mailing List**
@@ -127,14 +125,8 @@ Communication progressed through several ways:
 
 ---
 
-#### **8. Reflections on the Architectural Journey**
+#### **8. Reflections and Conclusions **
 
-This project has been a valuable lesson in the iterative nature of software architecture. While a significant amount of work on the Thrift client integration and the initial `admin-api-server` will not be merged upstream directly, this exploratory effort was absolutely necessary. This investigation was crucial in illuminating the technical landscape, uncovering hidden complexities, and ultimately defining the most robust and sustainable path forward for improving Airavata. It allowed the team to make a well-informed, strategic decision rather than pursuing a short-term fix.
+For me, I realized that this project has been a valuable lesson in the iterative nature of software architecture. While a significant amount of work on the Thrift client integration and the initial `admin-api-server` will not be merged upstream directly, I am still glad I did it for my own learning, and this exploratory work was necessary to do at some point to reach the best architectural decisions. 
 
----
-
-#### **9. Conclusion and Call for Collaboration**
-
-This project has successfully produced a modern frontend for Airavata's admin functionalities and conducted a crucial investigation into our backend architecture, revealing key areas for modernization. The current focus is on building a new Spring Boot API that will provide a stable, scalable, and dynamic foundation for the future of the Airavata admin portal.
-
-As development of this new API proceeds, community feedback is invaluable. Any **recommendations or input** regarding technical requirements, design patterns, or desired features would be greatly appreciated. For others who may face similar challenges with Thrift in the browser, I recommend building directly from the main branch source (`https://github.com/apache/thrift`) and being prepared to implement polyfills.
+As development of this new API proceeds, community feedback is invaluable! Any **recommendations or input** regarding technical requirements, design patterns, or desired features would be greatly appreciated. Thanks for reading!
