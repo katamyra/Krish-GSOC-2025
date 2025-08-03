@@ -7,7 +7,7 @@
 
 #### **1. Introduction**
 
-As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy PHP-based admin portal whose function includes critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality into a modern, robust, and maintainable technology stack, beginning with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the strategic pivot we have made to a new service architecture.
+As part of the broader effort to modernize Apache Airavata, this project's primary goal was to replace the legacy Django-based admin portal whose function includes critical administrative tasks such as managing compute resources, storage resources, and users. The objective is to migrate this functionality into a modern, robust, and maintainable technology stack, beginning with a new React-based user interface. The report I have written below details the progress made over the last few months of GSOC, including UI development, a deep dive into the technical challenges of backend integration, and the strategic pivot we have made to a new service architecture.
 
 ---
 
@@ -25,6 +25,22 @@ Key accomplishments in this phase include:
 
 **Note**: At this point, the UI's had been using mock data, and the next phase includes integration of real time data.
 
+##### UI v1 (Django Replication)
+
+<p align="center">
+
+  <img src="./Images/UIv1/UIv1.1.png" width="200"/>
+
+  <img src="./Images/UIv1/UIv1.2.png" width="200"/>
+
+  <img src="./Images/UIv1/UIv1.3.png" width="200"/>
+
+  <img src="./Images/UIv1/UIv1.4.png" width="200"/>
+
+</p>
+
+
+##### UI v2 (First Redesign) 
 ---
 
 #### **3. Phase II: Backend Integration and Technical Investigation**
