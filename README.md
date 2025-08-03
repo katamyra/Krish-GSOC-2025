@@ -87,20 +87,15 @@ The second phase aimed to replace the UI's mock data with live data from the bac
 
 #### **4. Phase III: Future Direction, Architectural Pivot, and Current Work**
 
-The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws. The initial strategic response was to design and begin development on a new, standalone API: the `admin-api-server`. This service made to provide modern, RESTful endpoints specifically for managing compute and storage resources.
+The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws, or the server would have to be adapted to run on HTTP. Based on this and discussions with the community, I began design and development on a new, standalone API: the `admin-api-server`. The idea was that this API would provide a modern, RESTful endpoints API specifically for managing compute and storage resources, which could then be adapted over time to take up more responsibilities from the airavata-api. The benefit to this is that the API could be built with the user-based paradigm in mind. 
 
-However, as this work progressed, a key strategic decision was made at the community level to avoid architectural fragmentation and the operational overhead associated with adding more standalone microservices. The new, preferred strategy was to consolidate this new functionality by enhancing an existing core service. The logical home for these new administrative capabilities was identified as the `research-service`.
-
-Therefore, the project underwent a second, more complex architectural pivot. The goal was no longer to build a new standalone service, but to create a **v2 of the `research-service` API** that would incorporate all the necessary admin functionality.
-
-This pivot introduced a significant and nuanced engineering challenge. The work, architecture, and logic that had been designed for the standalone `admin-api-server` could not simply be copied over. Instead, it needed to be carefully **translated and adapted to work within the constraints of the `research-service`'s existing v1 architecture**.
+However, as this work progressed, we decidede it was better to avoid architectural fragmentation and the operational overhead associated with adding a whole new separate API. I pivoted into instead adding a new version 2 api to the `research-service` API. This was a second, also complex architectural pivot which introduced a significant and nuanced engineering challenge because the work, architecture, and logic that had been designed for the standalone `admin-api-server` could not simply be copied over. Instead, it needed to be carefully **translated and adapted to work within the constraints of the `research-service`'s existing v1 architecture**.
 
 This translation effort is the core of my current work and involves several complexities:
 * **Reconciling Architectural Patterns:** The design patterns and assumptions of the new `admin-api-server` had to be reconciled with the established conventions and patterns already present in the `research-service`.
 * **Integrating Data Models:** The new data models for compute and storage resources had to be carefully integrated into the existing persistence layer of the `research-service`, ensuring consistency and avoiding conflicts.
-* **Refactoring Business Logic:** All the business logic written for the standalone service is being methodically refactored and re-instrumented to fit within the existing service layers and dependency injection framework of the `research-service`.
 
-This work is challenging as it requires a deep understanding of both the newly designed components and the existing application's internal structure. My current focus is on this methodical integration, embedding the necessary admin functionalities into the `research-service` to create its powerful new v2 API. The UI components developed in Phase I are now queued to connect to these forthcoming v2 endpoints once they are exposed.
+If you are more interested in the specific implementation details in the v2 API, feel free to take a look at the v2 API PR (linked below)!
 
 ---
 
