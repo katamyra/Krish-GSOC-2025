@@ -67,7 +67,6 @@ Key accomplishments in this phase include:
 
 </p>
 
-##### UI v2 (First Redesign) 
 ---
 
 #### **3. Phase II: Backend Integration and Technical Investigation**
@@ -75,20 +74,20 @@ Key accomplishments in this phase include:
 The second phase aimed to replace the UI's mock data with live data from the backend by connecting to the **Apache Thrift API**. Unlike a traditional REST API, Thrift requires a code-generation step using a compiler. This process revealed several significant technical hurdles that highlighted the friction between legacy Thrift architecture and modern web development practices.
 
 * **Challenge 1: Compiler and Module Incompatibility:** Our **Vite-based** React application requires **ES Modules (ESM)** for its JavaScript modules. The official Thrift compiler, having not received significant updates in this area, generates code using the older **CommonJS** format. This makes it incompatible with our modern toolchain out-of-the-box.
-    * **Solution:** After extensive research, I located a specific, unreleased commit on the Thrift source repository. By building the compiler from this exact source, I was able to generate ESM-compatible TypeScript code. The resulting code was generally functional, though occasionally "iffy," and required careful handling.
+    * **Solution:** After extensive research, I located a specific commit on the Thrift source repository. By building the compiler from this exact source, I was able to generate ESM-compatible TypeScript code. The resulting code was generally functional, though occasionally "iffy," and required careful handling.
 
 * **Challenge 2: Browser vs. Server-Side JavaScript:** The generated Thrift client code was designed for a server-side Node.js environment and depended on core Node APIs not present in web browsers.
     * **Solution:** While manually modifying the auto-generated code was an option, it was deemed impractical and unmaintainable. The more realistic approach was to implement several **browser polyfills**. These polyfills successfully bridged the environmental gap, allowing the server-centric code to execute in the browser.
 
-* **Debugging Step - Local Test Server:** To verify the generated client code and the polyfills, I built a local Thrift test server. I was able to stand up a fully functional version of the portal that successfully communicated with this local server. This crucial step proved that the client-side code was correct, isolating the remaining issues to the connection with the main production server.
+* **Debugging Step - Local Test Server:** At this point, I was still unable to get proper connection with the server through my react portal. To verify the generated client code and the polyfills, I built a local Thrift test server in Python. I was able to stand up a fully functional version of the portal that successfully communicated with this local server. This crucial step proved that the client-side code was correct, isolating the remaining issues to the connection with the main production server.
 
-* **Challenge 3: Insurmountable Network Protocol Mismatch:** The final and most critical blocker was the network protocol. The existing Airavata Thrift server communicates using the binary **`TSocket`** protocol, which worked well in its original PHP environment. However, for security reasons, web browsers are strictly limited to making requests via **HTTP** and **WebSockets**. This fundamental protocol incompatibility makes a direct connection from the browser-based React app to the `TSocket` service impossible.
+* **Challenge 3: Network Protocol Mismatch:** The final and most critical blocker was the network protocol. The existing Airavata Thrift server communicates using the binary **`TSocket`** protocol, which worked well in its original PHP environment. However, for security reasons, web browsers are limited to making requests via **HTTP** and **WebSockets**. This fundamental protocol incompatibility makes a direct connection from the browser-based React app to the `TSocket` service impossible.
 
 ---
 
 #### **4. Phase III: Future Direction, Architectural Pivot, and Current Work**
 
-The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws. The initial strategic response was to design and begin development on a new, standalone microservice: the `admin-api-server`. This service was a greenfield project, architected from the ground up to provide modern, RESTful endpoints specifically for managing compute and storage resources.
+The investigation in Phase II made it clear that a new backend strategy was required due to the legacy Thrift API's protocol and design flaws. The initial strategic response was to design and begin development on a new, standalone API: the `admin-api-server`. This service made to provide modern, RESTful endpoints specifically for managing compute and storage resources.
 
 However, as this work progressed, a key strategic decision was made at the community level to avoid architectural fragmentation and the operational overhead associated with adding more standalone microservices. The new, preferred strategy was to consolidate this new functionality by enhancing an existing core service. The logical home for these new administrative capabilities was identified as the `research-service`.
 
