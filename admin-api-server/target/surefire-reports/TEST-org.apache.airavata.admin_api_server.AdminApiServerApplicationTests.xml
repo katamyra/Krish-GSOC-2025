@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="org.apache.airavata.admin_api_server.AdminApiServerApplicationTests" time="3.048" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/test-classes:/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/classes:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.3/spring-boot-starter-security-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/Users/krishkatariya/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/krishkatariya/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/krishkatariya/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/krishkatariya/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/krishkatariya/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/krishkatariya/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/krishkatariya/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-config/6.5.1/spring-security-config-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-web/6.5.1/spring-security-web-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.3/spring-boot-starter-web-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.3/spring-boot-starter-tomcat-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.42/tomcat-embed-core-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.42/tomcat-embed-websocket-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/Users/krishkatariya/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/Users/krishkatariya/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-webmvc/6.2.8/spring-webmvc-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.3/spring-boot-starter-data-jpa-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.3/spring-boot-starter-jdbc-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-jdbc/6.2.8/spring-jdbc-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/hibernate/orm/hibernate-core/6.6.18.Final/hibernate-core-6.6.18.Final.jar:/Users/krishkatariya/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/krishkatariya/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/krishkatariya/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/krishkatariya/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/krishkatariya/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/krishkatariya/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/krishkatariya/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/krishkatariya/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/krishkatariya/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/krishkatariya/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/krishkatariya/.m2/repository/org/springframework/data/spring-data-jpa/3.5.1/spring-data-jpa-3.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/data/spring-data-commons/3.5.1/spring-data-commons-3.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-orm/6.2.8/spring-orm-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-tx/6.2.8/spring-tx-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-aspects/6.2.8/spring-aspects-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.3/spring-boot-starter-validation-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.42/tomcat-embed-el-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/krishkatariya/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/krishkatariya/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/krishkatariya/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/krishkatariya/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/krishkatariya/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/krishkatariya/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/krishkatariya/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/krishkatariya/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/Users/krishkatariya/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/krishkatariya/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/krishkatariya/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/krishkatariya/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/Users/krishkatariya/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/Users/krishkatariya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/Users/krishkatariya/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/krishkatariya/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/Users/krishkatariya/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/krishkatariya/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-test/6.5.1/spring-security-test-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-core/6.5.1/spring-security-core-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-crypto/6.5.1/spring-security-crypto-6.5.1.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="APPLICATION_NAME" value="admin-api-server"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/surefire/surefirebooter-20250722215722540_3.jar /Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/surefire 2025-07-22T21-57-22_296-jvmRun1 surefire-20250722215722540_1tmp surefire_0-20250722215722540_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/test-classes:/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/classes:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.5.3/spring-boot-starter-security-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.3/spring-boot-starter-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot/3.5.3/spring-boot-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.3/spring-boot-autoconfigure-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.3/spring-boot-starter-logging-3.5.3.jar:/Users/krishkatariya/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/krishkatariya/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/krishkatariya/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/krishkatariya/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/krishkatariya/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/krishkatariya/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/krishkatariya/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-aop/6.2.8/spring-aop-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-beans/6.2.8/spring-beans-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-config/6.5.1/spring-security-config-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-context/6.2.8/spring-context-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-web/6.5.1/spring-security-web-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-expression/6.2.8/spring-expression-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.3/spring-boot-starter-web-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.3/spring-boot-starter-json-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.3/spring-boot-starter-tomcat-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.42/tomcat-embed-core-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.42/tomcat-embed-websocket-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar:/Users/krishkatariya/.m2/repository/io/micrometer/micrometer-observation/1.15.1/micrometer-observation-1.15.1.jar:/Users/krishkatariya/.m2/repository/io/micrometer/micrometer-commons/1.15.1/micrometer-commons-1.15.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-webmvc/6.2.8/spring-webmvc-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.3/spring-boot-starter-data-jpa-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.3/spring-boot-starter-jdbc-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-jdbc/6.2.8/spring-jdbc-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/hibernate/orm/hibernate-core/6.6.18.Final/hibernate-core-6.6.18.Final.jar:/Users/krishkatariya/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/krishkatariya/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/krishkatariya/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/krishkatariya/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/krishkatariya/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/krishkatariya/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/krishkatariya/.m2/repository/net/bytebuddy/byte-buddy/1.17.6/byte-buddy-1.17.6.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/krishkatariya/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/krishkatariya/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/krishkatariya/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/krishkatariya/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/krishkatariya/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/krishkatariya/.m2/repository/org/springframework/data/spring-data-jpa/3.5.1/spring-data-jpa-3.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/data/spring-data-commons/3.5.1/spring-data-commons-3.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-orm/6.2.8/spring-orm-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-tx/6.2.8/spring-tx-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-aspects/6.2.8/spring-aspects-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.3/spring-boot-starter-validation-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.42/tomcat-embed-el-10.1.42.jar:/Users/krishkatariya/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/krishkatariya/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/krishkatariya/.m2/repository/com/h2database/h2/2.3.232/h2-2.3.232.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.3/spring-boot-starter-test-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-test/3.5.3/spring-boot-test-3.5.3.jar:/Users/krishkatariya/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.3/spring-boot-test-autoconfigure-3.5.3.jar:/Users/krishkatariya/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/krishkatariya/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/krishkatariya/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/krishkatariya/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/krishkatariya/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/krishkatariya/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/krishkatariya/.m2/repository/org/assertj/assertj-core/3.27.3/assertj-core-3.27.3.jar:/Users/krishkatariya/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/krishkatariya/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/krishkatariya/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/krishkatariya/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/krishkatariya/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/Users/krishkatariya/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/Users/krishkatariya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar:/Users/krishkatariya/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/krishkatariya/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/Users/krishkatariya/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/krishkatariya/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-core/6.2.8/spring-core-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-jcl/6.2.8/spring-jcl-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/springframework/spring-test/6.2.8/spring-test-6.2.8.jar:/Users/krishkatariya/.m2/repository/org/xmlunit/xmlunit-core/2.10.2/xmlunit-core-2.10.2.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-test/6.5.1/spring-security-test-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-core/6.5.1/spring-security-core-6.5.1.jar:/Users/krishkatariya/.m2/repository/org/springframework/security/spring-security-crypto/6.5.1/spring-security-crypto-6.5.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/krishkatariya"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server/target/surefire/surefirebooter-20250722215722540_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.2"/>
+    <property name="user.name" value="krishkatariya"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.6"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/krishkatariya/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/3c/r82xwjns7951c38y1h73rxg40000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="93086"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/krishkatariya/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="23.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[admin-api-server] "/>
+  </properties>
+  <testcase name="contextLoads" classname="org.apache.airavata.admin_api_server.AdminApiServerApplicationTests" time="0.267">
+    <system-out><![CDATA[21:57:22.862 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.apache.airavata.admin_api_server.AdminApiServerApplicationTests]: AdminApiServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:57:22.915 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.apache.airavata.admin_api_server.AdminApiServerApplication for test class org.apache.airavata.admin_api_server.AdminApiServerApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-07-22T21:57:23.085-07:00  INFO 93086 --- [admin-api-server] [           main] o.a.a.a.AdminApiServerApplicationTests   : Starting AdminApiServerApplicationTests using Java 23.0.2 with PID 93086 (started by krishkatariya in /Users/krishkatariya/dev/Professional Work/Google Summer of Code/admin-api-server)
+2025-07-22T21:57:23.085-07:00 DEBUG 93086 --- [admin-api-server] [           main] o.a.a.a.AdminApiServerApplicationTests   : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-22T21:57:23.086-07:00  INFO 93086 --- [admin-api-server] [           main] o.a.a.a.AdminApiServerApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-07-22T21:57:23.098-07:00 DEBUG 93086 --- [admin-api-server] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@44d70181
+2025-07-22T21:57:23.388-07:00  INFO 93086 --- [admin-api-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-22T21:57:23.419-07:00  INFO 93086 --- [admin-api-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 8 JPA repository interfaces.
+2025-07-22T21:57:23.633-07:00  INFO 93086 --- [admin-api-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-22T21:57:23.660-07:00  INFO 93086 --- [admin-api-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-22T21:57:23.681-07:00  INFO 93086 --- [admin-api-server] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-22T21:57:23.791-07:00  INFO 93086 --- [admin-api-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-22T21:57:23.804-07:00  INFO 93086 --- [admin-api-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-22T21:57:23.880-07:00  INFO 93086 --- [admin-api-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-07-22T21:57:23.881-07:00  INFO 93086 --- [admin-api-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-22T21:57:23.893-07:00  WARN 93086 --- [admin-api-server] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-22T21:57:23.902-07:00  INFO 93086 --- [admin-api-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-22T21:57:24.361-07:00  INFO 93086 --- [admin-api-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists compute_resource_queues cascade 
+Hibernate: drop table if exists compute_resources cascade 
+Hibernate: drop table if exists dataset_authors cascade 
+Hibernate: drop table if exists dataset_tags cascade 
+Hibernate: drop table if exists datasets cascade 
+Hibernate: drop table if exists model_authors cascade 
+Hibernate: drop table if exists model_tags cascade 
+Hibernate: drop table if exists models cascade 
+Hibernate: drop table if exists notebook_authors cascade 
+Hibernate: drop table if exists notebook_tags cascade 
+Hibernate: drop table if exists notebooks cascade 
+Hibernate: drop table if exists repositories cascade 
+Hibernate: drop table if exists repository_authors cascade 
+Hibernate: drop table if exists repository_tags cascade 
+Hibernate: drop table if exists storage_resources cascade 
+Hibernate: drop table if exists user_starred_resources cascade 
+Hibernate: drop table if exists users cascade 
+Hibernate: create table compute_resource_queues (compute_resource_id bigint not null, queue_name varchar(255))
+Hibernate: create table compute_resources (id bigint generated by default as identity, compute varchar(255) not null, compute_type varchar(255) not null, data_movement_protocol varchar(255), description varchar(255), name varchar(255) not null, scheduler_type varchar(255), status varchar(255) not null, primary key (id))
+Hibernate: create table dataset_authors (dataset_id bigint not null, author varchar(255))
+Hibernate: create table dataset_tags (dataset_id bigint not null, tag varchar(255))
+Hibernate: create table datasets (star_count integer, id bigint generated by default as identity, description varchar(1000), category varchar(255), title varchar(255) not null, primary key (id))
+Hibernate: create table model_authors (model_id bigint not null, author varchar(255))
+Hibernate: create table model_tags (model_id bigint not null, tag varchar(255))
+Hibernate: create table models (star_count integer, id bigint generated by default as identity, description varchar(1000), category varchar(255), title varchar(255) not null, primary key (id))
+Hibernate: create table notebook_authors (notebook_id bigint not null, author varchar(255))
+Hibernate: create table notebook_tags (notebook_id bigint not null, tag varchar(255))
+Hibernate: create table notebooks (star_count integer, id bigint generated by default as identity, category varchar(255), description TEXT, title varchar(255) not null, primary key (id))
+Hibernate: create table repositories (star_count integer, id bigint generated by default as identity, category varchar(255), description TEXT, title varchar(255) not null, primary key (id))
+Hibernate: create table repository_authors (repository_id bigint not null, author varchar(255))
+Hibernate: create table repository_tags (repository_id bigint not null, tag varchar(255))
+Hibernate: create table storage_resources (id bigint generated by default as identity, description varchar(255), name varchar(255) not null, status varchar(255) not null, storage varchar(255) not null, storage_type varchar(255) not null, primary key (id))
+Hibernate: create table user_starred_resources (id bigint generated by default as identity, resource_id bigint not null, user_id bigint not null, resource_type enum ('COMPUTE_RESOURCE','DATASET','MODEL','NOTEBOOK','REPOSITORY','STORAGE_RESOURCE') not null, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, email varchar(255) not null unique, name varchar(255) not null, primary key (id))
+Hibernate: alter table if exists compute_resource_queues add constraint FKocw7d0a9j09ir8fnjpxgx1ipd foreign key (compute_resource_id) references compute_resources
+Hibernate: alter table if exists dataset_authors add constraint FKfvx4ql6ooqhsre3wrrfkmp8gw foreign key (dataset_id) references datasets
+Hibernate: alter table if exists dataset_tags add constraint FK8o0wghadnunvptkaaviytf0uj foreign key (dataset_id) references datasets
+Hibernate: alter table if exists model_authors add constraint FK5h2k5pjkundyqxg715a47c98b foreign key (model_id) references models
+Hibernate: alter table if exists model_tags add constraint FKsn4fj2rwmew9a6rqiv71b5fhf foreign key (model_id) references models
+Hibernate: alter table if exists notebook_authors add constraint FKghashgr4uv5ad9fthc530jvk6 foreign key (notebook_id) references notebooks
+Hibernate: alter table if exists notebook_tags add constraint FKcictuq2y5g808ix6bieaiovho foreign key (notebook_id) references notebooks
+Hibernate: alter table if exists repository_authors add constraint FKjme1trjd8aoj4f5ax7n93s95h foreign key (repository_id) references repositories
+Hibernate: alter table if exists repository_tags add constraint FKqehso0y2bd7rccmgd70sigb76 foreign key (repository_id) references repositories
+Hibernate: alter table if exists user_starred_resources add constraint FKqyqqw12mj2c9tv86mfowbxroi foreign key (user_id) references users
+2025-07-22T21:57:24.394-07:00  INFO 93086 --- [admin-api-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-22T21:57:24.495-07:00  INFO 93086 --- [admin-api-server] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-22T21:57:25.207-07:00  WARN 93086 --- [admin-api-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-22T21:57:25.262-07:00 DEBUG 93086 --- [admin-api-server] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 57 mappings in 'requestMappingHandlerMapping'
+2025-07-22T21:57:25.307-07:00 DEBUG 93086 --- [admin-api-server] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-22T21:57:25.314-07:00  WARN 93086 --- [admin-api-server] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1edc1d33-d5c0-4eb8-b6f1-6334f23ae5f9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-07-22T21:57:25.318-07:00  INFO 93086 --- [admin-api-server] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-22T21:57:25.404-07:00 DEBUG 93086 --- [admin-api-server] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-22T21:57:25.420-07:00 DEBUG 93086 --- [admin-api-server] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-22T21:57:25.432-07:00  INFO 93086 --- [admin-api-server] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-07-22T21:57:25.462-07:00  INFO 93086 --- [admin-api-server] [           main] o.a.a.a.AdminApiServerApplicationTests   : Started AdminApiServerApplicationTests in 2.484 seconds (process running for 2.89)
+Hibernate: select count(*) from models m1_0
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into models (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_authors (model_id,author) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: insert into model_tags (model_id,tag) values (?,?)
+Hibernate: select count(*) from datasets d1_0
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into datasets (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_authors (dataset_id,author) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: insert into dataset_tags (dataset_id,tag) values (?,?)
+Hibernate: select count(*) from notebooks n1_0
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebooks (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_authors (notebook_id,author) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: insert into notebook_tags (notebook_id,tag) values (?,?)
+Hibernate: select count(*) from repositories r1_0
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repositories (category,description,star_count,title,id) values (?,?,?,?,default)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_authors (repository_id,author) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: insert into repository_tags (repository_id,tag) values (?,?)
+Hibernate: select count(*) from storage_resources sr1_0
+Hibernate: insert into storage_resources (description,name,status,storage,storage_type,id) values (?,?,?,?,?,default)
+Hibernate: insert into storage_resources (description,name,status,storage,storage_type,id) values (?,?,?,?,?,default)
+Hibernate: insert into storage_resources (description,name,status,storage,storage_type,id) values (?,?,?,?,?,default)
+Hibernate: insert into storage_resources (description,name,status,storage,storage_type,id) values (?,?,?,?,?,default)
+Hibernate: insert into storage_resources (description,name,status,storage,storage_type,id) values (?,?,?,?,?,default)
+Hibernate: select count(*) from compute_resources cr1_0
+Hibernate: insert into compute_resources (compute,compute_type,data_movement_protocol,description,name,scheduler_type,status,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resources (compute,compute_type,data_movement_protocol,description,name,scheduler_type,status,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resources (compute,compute_type,data_movement_protocol,description,name,scheduler_type,status,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resources (compute,compute_type,data_movement_protocol,description,name,scheduler_type,status,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resources (compute,compute_type,data_movement_protocol,description,name,scheduler_type,status,id) values (?,?,?,?,?,?,?,default)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+Hibernate: insert into compute_resource_queues (compute_resource_id,queue_name) values (?,?)
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/krishkatariya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.6/byte-buddy-agent-1.17.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+</testsuite>
