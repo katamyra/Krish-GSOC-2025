@@ -39,6 +39,33 @@ Key accomplishments in this phase include:
 
 </p>
 
+##### UI v2 (Replicated the Design In React, code overwritten by v3 UI)
+
+<p align="center">
+
+  <img src="./Images/UIv2.png" width="200"/>
+
+</p>
+
+##### UI v3 (Final Design UI Implemented in React)
+
+<p align="center">
+
+  <img src="./Images/UIv3/UIv3.1.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.2.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.3.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.4.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.5.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.6.png" width="200"/>
+
+  <img src="./Images/UIv3/UIv3.7.png" width="200"/>
+
+</p>
 
 ##### UI v2 (First Redesign) 
 ---
