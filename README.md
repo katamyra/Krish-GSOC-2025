@@ -125,8 +125,12 @@ Communication happened throughout GSoC through several ways:
 
 ---
 
-#### **8. Reflections and Conclusions**
+#### **8. Reflections, Conclusions, and Future Work**
 
 For me, I realized that this project has been a valuable lesson in the iterative nature of software architecture. While a significant amount of work on the Thrift client integration and the initial `admin-api-server` will not be merged upstream directly, I am still glad I did it for my own learning, and this exploratory work was necessary to do at some point to reach the best architectural decisions. 
 
-As development of this new API proceeds, community feedback is invaluable! Any **recommendations or input** regarding technical requirements, design patterns, or desired features would be greatly appreciated. Thanks for reading!
+As future work on the integration of this new API proceeds, community feedback is invaluable! Any **recommendations or input** regarding technical requirements, design patterns, or desired features would be greatly appreciated. 
+
+#### **9. Thanks**
+
+Thanks to all those helped me throughout the GSoC process, including but not limited to: Yasith Jayawardana, Suresh Marru, Eroma Abeysinghe, Dimuthu Wannipurage, and Lahiru Jayathilake! And thank you for reading this far!
