@@ -131,6 +131,8 @@ For me, I realized that this project has been a valuable lesson in the iterative
 
 As future work on the integration of this new API proceeds, community feedback is invaluable! Any **recommendations or input** regarding technical requirements, design patterns, or desired features would be greatly appreciated. 
 
+---
+
 #### **9. Thanks**
 
 Thanks to all those helped me throughout the GSoC process, including but not limited to: Yasith Jayawardana, Suresh Marru, Eroma Abeysinghe, Dimuthu Wannipurage, and Lahiru Jayathilake! And thank you for reading this far!
